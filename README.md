@@ -1,49 +1,40 @@
-# Professional Project
+# Professional Application
 
-Production-ready application with modern architecture.
+Production-ready with enterprise features.
 
-## Quick Start
-
-```bash
-npm install
-npm run dev
-```
+![Node.js](https://img.shields.io/badge/Node.js-v18+-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## Features
 
-✓ RESTful API  
-✓ Error handling  
-✓ CORS support  
-✓ Environment config  
-✓ Docker ready  
-✓ Comprehensive tests  
+✅ RESTful API with auth  
+✅ JWT security  
+✅ Database layer  
+✅ Error handling  
+✅ Docker ready  
+✅ Test suite  
 
-## API Endpoints
+## Quick Start
 
-- `GET /health` - Health check
-- `GET /api/status` - Server status
-- `GET /api/list` - Fetch list
-- `POST /api/data` - Create data
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
 
-## Environment Variables
+## API
 
-```
-PORT=3000
-NODE_ENV=development
-```
+- \`POST /auth/register\` - Register
+- \`POST /auth/login\` - Login
+- \`GET /api/data\` - Fetch data
+- \`POST /api/data\` - Create data
+- \`GET /health\` - Health check
 
 ## Testing
 
-```bash
+\`\`\`bash
 npm test
-```
-
-## Deployment
-
-- Docker: `docker build -t app .`
-- Node: `npm start`
+\`\`\`
 
 ---
 
-**Author:** syedaliahzum  
-**License:** MIT
+**Author:** syedaliahzum | **License:** MIT

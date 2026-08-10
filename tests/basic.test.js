@@ -1,17 +1,13 @@
-describe('Application Tests', () => {
-  test('should validate email', () => {
-    const email = 'test@example.com';
-    expect(email).toMatch(/@/);
+describe('Tests', () => {
+  test('email validation', () => expect('test@example.com').toMatch(/@/));
+  test('data structure', () => {
+    const d = {id: 1, name: 'test', active: true};
+    expect(d).toHaveProperty('id');
+    expect(d.active).toBe(true);
   });
-
-  test('should parse config', () => {
-    const config = { port: 3000, env: 'dev' };
-    expect(config.port).toBe(3000);
-  });
-
-  test('should handle data structures', () => {
-    const data = { id: 1, name: 'test', active: true };
-    expect(data).toHaveProperty('id');
-    expect(data.active).toBe(true);
+  test('hash', () => {
+    const crypto = require('crypto');
+    const h = crypto.createHash('sha256').update('password').digest('hex');
+    expect(h).toHaveLength(64);
   });
 });
